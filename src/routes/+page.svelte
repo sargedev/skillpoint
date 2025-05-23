@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import {pdf_files} from "$lib/data/pdf";
+</script>
+
+<table>
+    <tbody>
+        {#each Object.entries(pdf_files) as [year, categories]}
+            <tr><td>{year}</td></tr>
+        {/each}
+    </tbody>
+</table>
